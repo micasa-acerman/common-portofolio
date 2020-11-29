@@ -1,18 +1,5 @@
-## Gatsby Starter - Calpa's Blog
-
-[![GitHub license](https://img.shields.io/github/license/calpa/gatsby-starter-calpa-blog.svg)](https://github.com/calpa/gatsby-starter-calpa-blog/blob/master/LICENSE)
-[![Accept Pull Requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/calpa/gatsby-starter-calpa-blog/pulls)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/calpa/gatsby-starter-calpa-blog.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fcalpa%2Fblog)
-[![Greenkeeper badge](https://badges.greenkeeper.io/calpa/gatsby-starter-calpa-blog.svg)](https://greenkeeper.io/)
-[![Build Status](https://api.travis-ci.org/calpa/gatsby-starter-calpa-blog.svg?branch=master)](https://github.com/calpa/gatsby-starter-calpa-blog/blob/master/.travis.yml)
-[![CodeFactor](https://www.codefactor.io/repository/github/calpa/gatsby-starter-calpa-blog/badge)](https://www.codefactor.io/repository/github/calpa/gatsby-starter-calpa-blog)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/69c4fc63-9bed-44e4-aee4-77ceb456f770/deploy-status)](https://app.netlify.com/sites/calpa/deploys)
-
-[繁體中文](README-zh-Hant.md) | [简体中文](README-zh-Hans.md) | [English](README.md)
-
-![Home Page](https://i.imgur.com/lVUwIZC.png)
-
-Build a blog system like [Calpa's Blog](https://calpa.me) in ease.
+## Gatsby Starter - Micasa's Blog
+[Micasa's Blog](https://micasa-acerman.github.io/common-portofolio/)
 
 If you like this project, please don't hesitate to star it. Thank you.
 
@@ -54,7 +41,6 @@ You can edit the posts in `/src/content/*.md`, or using Netlify-cms to edit the 
 
 Use the button below to build and deploy your own copy of the repository:
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/calpa/gatsby-starter-calpa-blog" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template.
 
@@ -63,8 +49,6 @@ Next, it will build and deploy the new site on Netlify, bringing you to the blog
 ### Code with Codesandbox
 
 Use the button below to code with the blog system:
-
-[![Edit blog](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/calpa/gatsby-starter-calpa-blog/tree/master/)
 
 ## Prerequisites
 
@@ -203,15 +187,3 @@ gitalk: {
 
 - `npm run reset` to clear the local cache
 - Check [GatsbyJS Debugging Docs](https://www.gatsbyjs.org/docs/debugging-html-builds/)
-
-## Contributing
-
-Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more information.
-
-And don't hesitate to put your star and watch this starter project.
-
-## Contact
-
-If you are interested in this project, please feel free to contact [Calpa Liu](calpaliu@gmail.com).
-
-Thanks For Contribute... :)
