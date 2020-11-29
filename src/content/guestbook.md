@@ -1,12 +1,13 @@
 ---
 templateKey: blog-post
-id: https://calpa.me/guestbook/
-title: 留言簿
+id: guestroom
+title: Гостевая комната
 slug: /guestbook
 date: 2017-01-01T03:48:03.125Z
 description: ""
+type: page
 tags:
-  - 閱讀
+  - Гости
 ---
 
-歡迎留言
+Привет дорогой друг!
