@@ -1,10 +1,24 @@
 @import "../../styles/colors";
 
 .footer {
-  font-size: 12px;
-  padding-bottom: 2rem;
+  margin-top: 2em;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding: 2em 0;
+  background-color: $black;
+  & * {
+    color: $light-blue;
+  }
+  & a {
+    opacity: .8;
+    color: $white;
+    &:hover {
+      opacity: 1;
+      color: $white
+    }
+  }
 
   .copyright {
-    color: $san-juan;
+    color: $light-blue;
   }
 }

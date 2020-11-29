@@ -12,7 +12,7 @@ const NavItem = ({ url, name, list }) => {
   if (list.length === 0) {
     return (
       <Link
-        className="nav-btn btn btn-link"
+        className="nav-btn"
         href={url}
         to={url}
         onClick={() => {

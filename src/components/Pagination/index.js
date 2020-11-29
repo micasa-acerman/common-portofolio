@@ -19,7 +19,8 @@ const getPageNumber = pathname => pathname.split('/')[2];
 
 const Pagination = ({ pathname, pageCount }) => {
   const currentPageNumber = getPageNumber(pathname);
-  return (
+  return false?(
+    
     <nav aria-label="Page navigation example">
       <ul className="pagination justify-content-center">
         <PageItem
@@ -35,7 +36,7 @@ const Pagination = ({ pathname, pageCount }) => {
         />
       </ul>
     </nav>
-  );
+  ):(<></>);
 };
 
 PageItem.propTypes = {

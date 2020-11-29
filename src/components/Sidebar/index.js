@@ -17,6 +17,7 @@ const {
   iconUrl,
   about,
   facebook,
+  name
 } = config;
 
 const Icon = ({ href, icon }) => (
@@ -32,19 +33,19 @@ const Icon = ({ href, icon }) => (
   </a>
 );
 
-const Sidebar = ({ totalCount, latestPosts }) => (
+const Sidebar = ({ totalCount, latestPosts,pathPrefix }) => (
   <header className="intro-header site-heading text-center col-xl-2 col-lg-3 col-xs-12 order-lg-1">
     <div className="about-me">
       <Link to={about} href={about} className="name">
-        <img className="avatar" src={iconUrl} alt="Calpa" />
-        <h4>Calpa</h4>
+        <img className="avatar" src={`${pathPrefix}/${iconUrl}`} alt={name} />
+        <h4>{name}</h4>
       </Link>
       <p className="mb-1">{wordings[0]}</p>
       <p className="mb-3">{wordings[1]}</p>
-      <Icon
+      {/* <Icon
         href={`https://www.zhihu.com/people/${zhihuUsername}`}
-        icon={['fab', 'zhihu']}
-      />
+        icon={['far','telegram']}
+      /> */}
       <Icon
         href={`https://github.com/${githubUsername}`}
         icon={['fab', 'github']}
@@ -92,6 +93,9 @@ export default () => (
       }
 
       query SidebarQuery {
+        site(siteMetadata: {}) {
+          pathPrefix
+        }
         all: allMarkdownRemark {
           totalCount
         }
@@ -108,6 +112,6 @@ export default () => (
         }
       }
     `}
-    render={data => <Sidebar {...data.all} {...data.limited} />}
+    render={data => <Sidebar {...data.all} {...data.limited} pathPrefix={data.site.pathPrefix} />}
   />
 );

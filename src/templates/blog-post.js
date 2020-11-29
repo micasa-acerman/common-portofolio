@@ -72,8 +72,8 @@ class BlogPost extends Component {
         <Sidebar />
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
-          <div className="m-message" style={bgWhite}>
-            如果你覺得我的文章對你有幫助的話，希望可以推薦和交流一下。歡迎
+          {/* <div className="m-message" style={bgWhite}>
+            Если вы считаете, что моя статья полезна для вас, я надеюсь, вы порекомендуете ее своим друзьям :D. добро пожаловать
             <ExternalLink
               href="https://github.com/calpa/gatsby-starter-calpa-blog"
               title="關注和 Star 本博客"
@@ -84,17 +84,17 @@ class BlogPost extends Component {
               title="關注我的 Github"
             />
             。
-          </div>
+          </div> */}
 
           <div id="gitalk-container" />
         </div>
 
-        <ShareBox url={slug} />
+        {/* <ShareBox url={slug} /> */}
 
         <SEO
           title={title}
           url={slug}
-          siteTitleAlt="Calpa's Blog"
+          siteTitleAlt="Micasa's Blog"
           isPost={false}
           description={excerpt}
           image={headerImage || 'https://i.imgur.com/M795H8A.jpg'}

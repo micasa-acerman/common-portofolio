@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { config } from '../../../data';
+import './layout.scss'
 
 const Head = () => (
   <Helmet defaultTitle={config.title} titleTemplate={`%s | ${config.title}`}>
@@ -35,10 +36,6 @@ const Head = () => (
     <meta
       name="google-site-verification"
       content={config.meta.google_site_verification}
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"

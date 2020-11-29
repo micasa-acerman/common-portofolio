@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
+import { StaticQuery, graphql } from 'gatsby';
 
 import JueJin from '../JueJin';
-
-import { parseImgur } from '../../api/images';
 
 const Header = ({
   img,
@@ -14,13 +13,13 @@ const Header = ({
   authorName,
   jueJinPostLink,
   jueJinLikeIconLink,
+  pathPrefix
 }) => (
   <div className="col-12 header" style={{ padding: 0 }} id="header">
     <div
       className="img-container"
       style={{
-        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(${img})`,
-        marginTop: -58,
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(${img})`
       }}
     >
       {title && <h1 className="u-title">{title}</h1>}
@@ -29,7 +28,7 @@ const Header = ({
           <div className="m-left">
             {authorImage && (
               <img
-                src={parseImgur(authorImage, 'small-square')}
+                src={`${pathPrefix}/${authorImage}`}
                 className="author-image"
                 alt={authorName}
               />
@@ -69,4 +68,15 @@ Header.defaultProps = {
   jueJinLikeIconLink: '',
 };
 
-export default Header;
+export default (params) => (
+  <StaticQuery
+    query={graphql`
+      query HeaderQuery {
+        site(siteMetadata: {}) {
+          pathPrefix
+        }
+      }
+    `}
+    render={data => <Header {...params} pathPrefix={data.site.pathPrefix} />}
+  />
+);

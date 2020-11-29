@@ -9,12 +9,14 @@ import { parseImgur } from '../../api/images';
 import './index.scss';
 
 const imageStyle = (headerImage, color) => ({
-  backgroundColor: `#${color}`,
+  // backgroundColor: `${!color.length?'black':'false',typeof(color)}`,
   backgroundImage: ` url(${parseImgur(headerImage, 'large')})`,
+  backgroundSize: 'cover'
 });
 
-const CardHeader = ({ url, image, backgroundColor }) => (
+const CardHeader = ({ url, image, backgroundColor,date }) => (
   <Link to={url} href={url}>
+    <span className="date">{date}</span>
     <div className="wrapper" style={imageStyle(image, backgroundColor)} />
   </Link>
 );
@@ -28,29 +30,29 @@ const Card = ({
   description,
   tags = [],
 }) => (
-  <div className="col-sm-12 pb-4">
+  <div className="col-sm-12 col-md-6 pb-4">
     <div className="custom-card">
       {headerImage && (
         <CardHeader
           url={url}
           image={headerImage}
           backgroundColor={headerBackgroundColor}
+          date={date.split('T')[0]}
         />
       )}
       <div className="data">
         <div className="content">
           <div className="stats">
-            <span className="date">{date.split('T')[0]}</span>
             {tags.map(name => (
               <Tag name={name} key={name} />
             ))}
           </div>
           <Link to={url} href={url}>
-            <h4 className="title">{title}</h4>
+            <h4 className="title glitch" data-text={title}>{title}</h4>
           </Link>
           <p>{description}</p>
           <Link to={url} href={url}>
-            ....繼續閱讀全文內容
+            Подробнее
           </Link>
         </div>
       </div>
@@ -59,12 +61,10 @@ const Card = ({
 );
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
   date: PropTypes.string,
   url: PropTypes.string.isRequired,
   headerImage: PropTypes.string,
   headerBackgroundColor: PropTypes.string,
-  description: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
 };
 

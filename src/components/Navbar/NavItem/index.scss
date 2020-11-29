@@ -1,8 +1,18 @@
 @import "../../../styles/hover.scss";
 
 .nav-btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  padding: .357rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  
+
   @extend %hover;
   .navbar-nav & {
-    color: $light-blue;
+    color: '$light-blue';
   }
 }

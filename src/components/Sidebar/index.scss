@@ -17,6 +17,8 @@
       height: 120px;
       width: 120px;
       transition: transform 0.5s;
+      -o-object-fit: cover;
+      object-fit: cover;
 
       &:hover {
         transform: scale(1.2);

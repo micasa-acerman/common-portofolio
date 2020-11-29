@@ -7,7 +7,7 @@ import './index.scss';
 
 const LatestPost = ({ posts }) => (
   <div className="latest-post">
-    <p>最新文章</p>
+    <p>Последние статьи</p>
     {posts.map(({ node }) => (
       <Link
         to={node.frontmatter.url || node.frontmatter.slug || node.fields.slug}
