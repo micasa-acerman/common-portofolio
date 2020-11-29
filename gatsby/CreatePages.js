@@ -5,33 +5,35 @@ module.exports = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   return graphql(`
-    {
-      allMarkdownRemark(
-        limit: 1000
-        sort: { order: DESC, fields: frontmatter___date }
-      ) {
-        edges {
-          node {
+  {
+    allMarkdownRemark(
+      limit: 1000
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          
+          frontmatter {
+            tags
+            templateKey
+            slug
             id
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-              templateKey
-              slug
-              id
-              title
-              url: slug
-              date
-              tags
-              description
-              headerImage
-            }
+            title
+            url: slug
+            date
+            tags
+            description
+            headerImage
+            type
           }
         }
       }
     }
+  }
   `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
@@ -39,10 +41,11 @@ module.exports = ({ actions, graphql }) => {
 
     const { edges = [] } = result.data.allMarkdownRemark;
 
+    const posts = Array.prototype.filter.bind(edges)(({node})=>node.frontmatter.type === "post")
+    console.log("POSTS COUNT :", posts)
     const tagSet = new Set();
-
     createPaginatedPages({
-      edges,
+      edges:posts,
       createPage,
       pageTemplate: 'src/templates/index.js',
       context: {
@@ -57,17 +60,14 @@ module.exports = ({ actions, graphql }) => {
       },
     });
 
-    // 創建文章頁面
     edges.forEach(({ node }, index) => {
       const { id, frontmatter, fields } = node;
       const { slug, tags, templateKey } = frontmatter;
 
-      // 讀取標籤
       if (tags) {
         tags.forEach(item => tagSet.add(item));
       }
 
-      // 允许自定义地址
       let $path = fields.slug;
       if (slug) {
         $path = slug;
@@ -79,7 +79,6 @@ module.exports = ({ actions, graphql }) => {
         path: $path,
         tags,
         component: path.resolve(`src/templates/${String(component)}.js`),
-        // additional data can be passed via context
         context: {
           id,
           index,
@@ -87,7 +86,6 @@ module.exports = ({ actions, graphql }) => {
       });
     });
 
-    // 創建標籤頁面
     return tagSet.forEach((tag) => {
       createPage({
         path: `/tag/${tag}`,

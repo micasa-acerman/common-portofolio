@@ -1,52 +1,60 @@
 {
-  "url": "https://calpa.me",
+  "url": "https://micasa-acerman.github.io/common-portofolio/",
   "meta": {
     "favicon": "https://i.imgur.com/PO9Y4fT.jpg",
-    "keyword": "calpa, blog, JavaScript",
-    "description": "Calpa 的技術博客，開發日常，以及遇到的坑",
-    "theme_color": "#384f7c",
+    "keyword": "javascript, react, redux",
+    "description": "Micasa Blog",
+    "theme_color": "#000000",
     "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
   },
-  "name": "calpa",
+  "name": "Micasa",
   "about": "/2018/05/01/about-calpa-liu/",
-  "email": "calpaliu@gmail.com",
+  "email": "chrimsonm@gmail.com",
   "stats": {
     "image": "https://i.imgur.com/VjBWiSt.png",
-    "title": "過去三十日數據",
-    "description": "過去三十日數據"
+    "title": "Config.js Test",
+    "description": "Config.js Test"
   },
-  "title": "Calpa 的技術博客",
+  "title": "Micasa - Blog",
   "gitalk": {
-    "repo": "calpa.github.io",
-    "admin": ["calpa"],
-    "owner": "calpa",
-    "clientID": "18255f031b5e11edd98a",
-    "clientSecret": "2ff6331da9e53f9a91bcc991d38d550c85026714",
+    "repo": "micasa-acerman.github.io",
+    "admin": ["micasa-acerman"],
+    "owner": "micasa-acerman",
+    "clientID": "f24b03be1b7f28df0b74",
+    "clientSecret": "695b57388728aac247ff92ada9fe26bdf9f8f7a4",
     "pagerDirection": "first",
     "distractionFreeMode": true
   },
   "License": "by",
   "friends": [
     {
-      "href": "https://calpa.me",
-      "title": "Calpa's Blog"
+      "href": "https://reactjs.org/",
+      "title": "React Official Website"
+    },
+    {
+      "href": "https://developer.mozilla.org/",
+      "title": "Mozile Developer Network"
+    },
+    {
+      "href": "https://learn.javascript.ru/",
+      "title": "Javascript lessons"
     }
   ],
-  "iconUrl": "https://i.imgur.com/kjt2x52.jpg",
-  "wordings": ["GatsbyJS, ReactJS", "全週期開發者"],
+  "iconUrl": "images/photo.jpg",
+  "wordings": ["Frontend and mobile developer"],
   "gaTrackId": "UA-84737574-3",
   "navbarList": [
     {
       "href": "/guestbook/",
-      "title": "留言簿"
+      "title": "Гостевая комната"
     },
     {
       "href": "/tags/",
-      "title": "Tags"
+      "title": "Метки"
     },
     {
       "href": "/2018/05/01/about-calpa-liu/",
-      "title": "關於作者"
+      "title": "Обо мне"
     }
   ],
   "redirectors": [
@@ -62,8 +70,7 @@
       "target": "/stats/"
     }
   ],
-  "zhihuUsername": "piao-xue-wu-ying",
-  "githubUsername": "calpa",
+  "githubUsername": "micasa-acerman",
   "maxPostsInPage": 10,
   "facebook": "calpablog"
 }
