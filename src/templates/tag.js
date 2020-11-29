@@ -27,7 +27,7 @@ const TagPage = ({ data, pageContext }) => {
             }}
           >
             {edges.length}
-            &nbsp;Articles in&nbsp;
+            &nbsp;Записей по тегу&nbsp;
             {tag}
           </div>
           {edges.map(({ node }) => (
@@ -41,7 +41,7 @@ const TagPage = ({ data, pageContext }) => {
       <SEO
         title={tag}
         url={`/tag/${tag}`}
-        siteTitleAlt="Calpa's Blog"
+        siteTitleAlt="Micasa's Blog"
         isPost={false}
         description={tag}
         image="https://i.imgur.com/M795H8A.jpg"
