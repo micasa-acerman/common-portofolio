@@ -1,0 +1,76 @@
+{
+  "url": "https://micasa-acerman.github.io/common-portofolio/",
+  "meta": {
+    "favicon": "/common-portofolio/favicons/android-chrome-192x192.png",
+    "keyword": "javascript, react, redux",
+    "description": "Micasa Blog",
+    "theme_color": "#000000",
+    "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
+  },
+  "name": "Micasa",
+  "about": "/2018/05/01/about-calpa-liu/",
+  "email": "chrimsonm@gmail.com",
+  "stats": {
+    "image": "https://i.imgur.com/VjBWiSt.png",
+    "title": "Config.js Test",
+    "description": "Config.js Test"
+  },
+  "title": "Micasa - Blog",
+  "gitalk": {
+    "repo": "micasa-acerman.github.io",
+    "admin": ["micasa-acerman"],
+    "owner": "micasa-acerman",
+    "clientID": "f24b03be1b7f28df0b74",
+    "clientSecret": "695b57388728aac247ff92ada9fe26bdf9f8f7a4",
+    "pagerDirection": "first",
+    "distractionFreeMode": true
+  },
+  "License": "by",
+  "friends": [
+    {
+      "href": "https://reactjs.org/",
+      "title": "React Official Website"
+    },
+    {
+      "href": "https://developer.mozilla.org/",
+      "title": "Mozile Developer Network"
+    },
+    {
+      "href": "https://learn.javascript.ru/",
+      "title": "Javascript lessons"
+    }
+  ],
+  "iconUrl": "images/photo.jpg",
+  "wordings": ["Frontend and mobile developer"],
+  "gaTrackId": "UA-84737574-3",
+  "navbarList": [
+    {
+      "href": "/guestbook/",
+      "title": "Гостевая комната"
+    },
+    {
+      "href": "/tags/",
+      "title": "Метки"
+    },
+    {
+      "href": "/2018/05/01/about-calpa-liu/",
+      "title": "Обо мне"
+    }
+  ],
+  "redirectors": [
+    {
+      "toPath": "/2018/05/01/about-calpa-liu/",
+      "fromPath": "/about/"
+    }
+  ],
+  "gaOptimizeId": "GTM-WHP7SC5",
+  "carouselItems": [
+    {
+      "src": "https://i.imgur.com/gw91CuI.jpg",
+      "target": "/stats/"
+    }
+  ],
+  "githubUsername": "micasa-acerman",
+  "maxPostsInPage": 10,
+  "facebook": "calpablog"
+}

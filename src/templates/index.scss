@@ -1,0 +1,27 @@
+.navlink {
+  border: solid 1px #d7d7d7;
+  border-radius: 0.2rem;
+  color: #7d7d7d;
+  background: white;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 0.9rem;
+}
+body{
+  cursor: url('/common-portofolio//images/cursor.svg'), auto;
+}
+.homepage{
+  position: relative;
+  &::before{
+    content: '';
+    display: block;
+    height: 350px;
+    width: 419px;
+    background: url('/common-portofolio/images/signature.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
